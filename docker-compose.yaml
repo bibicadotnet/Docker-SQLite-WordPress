@@ -10,3 +10,12 @@ services:
     volumes:
       - ./wordpress/html:/var/www/html
       - ./wordpress/custom.ini:/usr/local/etc/php/conf.d/custom.ini
+  wpcli:
+    depends_on:
+      - wordpress
+    image: wordpress:cli
+    entrypoint: wp
+    command: "--info"
+    volumes:
+      - ./wordpress/html:/var/www/html
+    tty: true
