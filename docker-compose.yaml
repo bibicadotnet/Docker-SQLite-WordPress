@@ -1,6 +1,7 @@
+version: '3'
 services:
   wordpress:
-    image: soulteary/sqlite-wordpress:6.5.2
+    image: soulteary/sqlite-wordpress:latest
     restart: always
     ports:
       - 8080:80
@@ -15,4 +16,3 @@ services:
     command: "--info"
     volumes:
       - ./wordpress/html:/var/www/html
-    tty: true
