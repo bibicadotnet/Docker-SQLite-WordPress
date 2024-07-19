@@ -1,5 +1,4 @@
 services:
-
   wordpress:
     image: soulteary/sqlite-wordpress:6.5.2
     restart: always
