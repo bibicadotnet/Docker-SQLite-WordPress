@@ -5,5 +5,5 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./wordpress/html:/var/www/html
+      - ./wordpress:/var/www/html
       - ./wordpress/custom.ini:/usr/local/etc/php/conf.d/custom.ini
